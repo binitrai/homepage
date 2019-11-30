@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calculator</title>
+	<script type="text/javascript">
+		function init() {
+			var res = 0;
+			var operand_1 = Number(prompt("Enter the first operand"));
+			var operand_2 = Number(prompt("Enter the second operand"));
+
+			if (isNaN(operand_1) || isNaN(operand_2)) {
+				res = "Please input valid operands";
+				alert(res);
+				return false;
+			}
+			var operator = prompt("Enter the operator eg +, - , *, /, and %");
+			res = "" + operand_1 + " " + operator + " " + operand_2 + " = ";
+			switch(operator) {
+				case "+" : res += operand_1 + operand_2;
+				break;
+				case "-" : res += operand_1 - operand_2;
+				break;
+				case "*" : res += operand_1 * operand_2;
+				break;
+				case "/" : res += operand_1 / operand_2;
+				break;
+				case "%" : res += operand_1 % operand_2;
+				break;
+				default : res = "You have not entered a valid operator. Please enter only +, -, *, /, and %"
+			}
+			alert(res);
+			return res;
+		}
+	</script>
+</head>
+<body>
+<h1>Basic calculator</h1>
+<button type="button" onclick="init()">Start</button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calculator</title>
+	<script type="text/javascript">
+		function init() {
+			var cnf = confirm("Are You male ?");
+			var res = cnf ? "Thanks for the confirmation. You are male" : "Thanks for the confirmation. You are female";
+			document.getElementById("res").innerHTML = res;
+
+		}
+	</script>
+</head>
+<body>
+<h1>Confirmation example</h1>
+<div>
+	<label for="genderchkbox"> <b>Click on the checkbox to confirm your gender male </b></label>
+	<input  type="checkbox" onclick="init()" id="genderchkbox"></input>
+</div>
+<h3>
+	<div id="res"></div>
+</h3>
+</body>
+</html>
